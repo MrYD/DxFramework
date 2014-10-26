@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F981778A-3A27-4BE9-B7C7-629F76EA747B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>REVERSI20</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\DxFrame1.0;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\BoardSource;c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\DxFrame1.0;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\BoardSource;c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CaraSelectScene.cpp" />
+    <ClCompile Include="Source\BoardSource\Board.cpp" />
+    <ClCompile Include="Source\BoardSource\FinalRead.cpp" />
+    <ClCompile Include="Source\BoardSource\Point.cpp" />
+    <ClCompile Include="Source\BoardSource\PointSheet.cpp" />
+    <ClCompile Include="Source\BoardSource\Read.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\BasicInput.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\Button.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\DrawableBase.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\GameModes.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\GameScene.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\Graphic.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\Main.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\MenuScene.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\Scene.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\Vector2.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\Vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CaraSelectScene.h" />
+    <ClInclude Include="Source\BoardSource\Board.h" />
+    <ClInclude Include="Source\BoardSource\FinalRead.h" />
+    <ClInclude Include="Source\BoardSource\Point.h" />
+    <ClInclude Include="Source\BoardSource\PointSheet.h" />
+    <ClInclude Include="Source\BoardSource\Read.h" />
+    <ClInclude Include="Source\DxFrame1.0\BasicInput.h" />
+    <ClInclude Include="Source\DxFrame1.0\Button.h" />
+    <ClInclude Include="Source\DxFrame1.0\DrawableBase.h" />
+    <ClInclude Include="Source\DxFrame1.0\GameModes.h" />
+    <ClInclude Include="Source\DxFrame1.0\GameScene.h" />
+    <ClInclude Include="Source\DxFrame1.0\Graphic.h" />
+    <ClInclude Include="Source\DxFrame1.0\MenuScene.h" />
+    <ClInclude Include="Source\DxFrame1.0\Scene.h" />
+    <ClInclude Include="Source\DxFrame1.0\Vector3.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
