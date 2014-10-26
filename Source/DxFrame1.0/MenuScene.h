@@ -14,5 +14,6 @@ private:
 	Graphic* Back;
 	Button* Hana;
 	Button* devil;
+	Button* button1;
 };
 

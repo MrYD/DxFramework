@@ -21,14 +21,21 @@ void Button::init()
 }
 void Button::upDate()
 {
+	//ドラッグ判定と処理
 	if(pointOnFlag(BasicInput::mouse.left.lastDown))
 	{
 		dragging = true;
 	}
-	if (BasicInput::mouse.left.input)
+	if(!BasicInput::mouse.left.input)
 	{
-		dragging == false;
+		dragging = false;
 	}
+	if (dragging && dragFlag)
+	{
+		setMidPosition(getMidPosition() + BasicInput::mouse.speed);
+	}
+
+	//クリック判定
 	if (BasicInput::mouse.left.up)
 	{
 		if (pointOnFlag(BasicInput::mouse.left.lastUp) && pointOnFlag(BasicInput::mouse.left.lastDown))
@@ -36,12 +43,7 @@ void Button::upDate()
 			clickedTimes++;
 		}
 	}
-	
 
-	if (dragging&&dragFlag)
-	{
-		setMidPosition(getMidPosition() + BasicInput::mouse.speed);
-	}
 }
 void Button::setTLight(int light)
 {

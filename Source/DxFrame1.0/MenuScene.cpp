@@ -12,6 +12,7 @@ MenuScene::~MenuScene()
 	delete Back;
 	delete Hana;
 	delete devil;
+	delete button1;
 }
 void MenuScene::init()
 {
@@ -29,10 +30,10 @@ void MenuScene::init()
 	DrawableList.push_back(Back);
 	Back->setGraph(Vector2(0, 0), ".\\Resource\\Pix\\“V‘‚Æ’n–1280_720.png");
 	Back->layer = 1;
-	Button *a = new Button();
-	DrawableList.push_back(a);
-	a->setDragFlag(true);
-	a->layer = 2;
+	button1 = new Button();
+	DrawableList.push_back(button1);
+	button1->setDragFlag(true);
+	button1->layer = 2;
 }
 void MenuScene::upDate()
 {
