@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\Board">
-      <UniqueIdentifier>{125c87ce-ac22-470d-b547-57f8dcd2820c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\DxFrame1.0">
       <UniqueIdentifier>{311787c5-ef67-48c3-9ecd-78ab7af5d3ab}</UniqueIdentifier>
     </Filter>
@@ -29,21 +26,6 @@
     </ClCompile>
     <ClCompile Include="Source\DxFrame1.0\MenuScene.cpp">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\BoardSource\Board.cpp">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\BoardSource\FinalRead.cpp">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\BoardSource\Point.cpp">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\BoardSource\PointSheet.cpp">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\BoardSource\Read.cpp">
-      <Filter>ソース ファイル\Board</Filter>
     </ClCompile>
     <ClCompile Include="Source\DxFrame1.0\BasicInput.cpp">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
@@ -79,21 +61,6 @@
     </ClInclude>
     <ClInclude Include="Source\DxFrame1.0\MenuScene.h">
       <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\BoardSource\Board.h">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\BoardSource\FinalRead.h">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\BoardSource\Point.h">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\BoardSource\PointSheet.h">
-      <Filter>ソース ファイル\Board</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\BoardSource\Read.h">
-      <Filter>ソース ファイル\Board</Filter>
     </ClInclude>
     <ClInclude Include="Source\DxFrame1.0\BasicInput.h">
       <Filter>ソース ファイル\DxFrame1.0</Filter>

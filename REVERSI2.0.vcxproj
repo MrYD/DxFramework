@@ -53,13 +53,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\DxFrame1.0;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\BoardSource;c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;.\Source\DxFrame1.0</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\DxFrame1.0;C:\Users\Main\Documents\Visual Studio 2013\Projects\REVERSI2.0\Source\BoardSource;c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;.\Source\DxFrame1.0</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -72,7 +72,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;.\Source\DxFrame1.0</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -80,17 +80,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;.\Source\DxFrame1.0</AdditionalLibraryDirectories>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CaraSelectScene.cpp" />
-    <ClCompile Include="Source\BoardSource\Board.cpp" />
-    <ClCompile Include="Source\BoardSource\FinalRead.cpp" />
-    <ClCompile Include="Source\BoardSource\Point.cpp" />
-    <ClCompile Include="Source\BoardSource\PointSheet.cpp" />
-    <ClCompile Include="Source\BoardSource\Read.cpp" />
     <ClCompile Include="Source\DxFrame1.0\BasicInput.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Button.cpp" />
     <ClCompile Include="Source\DxFrame1.0\DrawableBase.cpp" />
@@ -105,11 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CaraSelectScene.h" />
-    <ClInclude Include="Source\BoardSource\Board.h" />
-    <ClInclude Include="Source\BoardSource\FinalRead.h" />
-    <ClInclude Include="Source\BoardSource\Point.h" />
-    <ClInclude Include="Source\BoardSource\PointSheet.h" />
-    <ClInclude Include="Source\BoardSource\Read.h" />
     <ClInclude Include="Source\DxFrame1.0\BasicInput.h" />
     <ClInclude Include="Source\DxFrame1.0\Button.h" />
     <ClInclude Include="Source\DxFrame1.0\DrawableBase.h" />
