@@ -13,24 +13,28 @@ Scene::~Scene()
 void Scene::draw()
 {
 	//DrawableList‚Ì•`‰æ
+	int min = 0, count = 0;
 	for (std::list<DrawableBase*>::iterator itr = DrawableList.begin(); itr != DrawableList.end(); itr++)
 	{
 		if (!(*itr)->isVisible)continue;
 		(*itr)->upDate();
+		if ((*itr)->layer < min)
+		{
+			min = (*itr)->layer;
+		}
 	}
-	int i = 0, count = 0;
 	while (count<DrawableList.size())
 	{
-		i++;
 		for (std::list<DrawableBase*>::iterator itr =DrawableList.begin(); itr != DrawableList.end(); itr++)
 		{
-			if ((*itr)->layer == i)
+			if ((*itr)->layer == min)
 			{
 				count++;
 				if (!(*itr)->isVisible)continue;
 				(*itr)->draw();
 			}
 		}
+		min++;
 	}
 }
 
