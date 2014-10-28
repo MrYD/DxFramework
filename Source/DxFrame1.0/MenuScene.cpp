@@ -17,14 +17,17 @@ MenuScene::~MenuScene()
 void MenuScene::init()
 {
 	Hana = new Button();
-	Hana->setGraph(Vector2(300,400),".\\Resource\\Pix\\Hana.png");
-	Hana->setTopPosition(Vector2(200,150));
+	Hana->setGraph(Vector2(300, 400), ".\\Resource\\Pix\\Hana.png")
+		->setTopPosition(Vector2(200, 150));
+
 	devil = new Button();
-	devil->setGraph(Vector2(300,400),".\\Resource\\Pix\\devil.png");
-	devil->setTopPosition(Vector2(800, 150));
+	devil->setGraph(Vector2(300, 400), ".\\Resource\\Pix\\devil.png")
+		 ->setTopPosition(Vector2(800, 150));
+	
 	Back = new Graphic();
-	Back->setGraph(Vector2(0, 0), ".\\Resource\\Pix\\天国と地獄1280_720.png");
-	Back->layer = -1;
+	Back->setGraph(Vector2(0, 0), ".\\Resource\\Pix\\天国と地獄1280_720.png")
+		->layer = -1;
+	
 	button1 = new Button();
 	button1->setDragFlag(true);
 }

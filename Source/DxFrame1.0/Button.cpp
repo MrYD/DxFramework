@@ -21,75 +21,82 @@ void Button::init()
 }
 void Button::upDate()
 {
-	//ドラッグ判定と処理
-	if(pointOnFlag(BasicInput::mouse.left.lastDown))
-	{
-		dragging = true;
-	}
-	if(!BasicInput::mouse.left.input)
-	{
-		dragging = false;
-	}
-	if (dragging && dragFlag)
-	{
-		setMidPosition(getMidPosition() + BasicInput::mouse.speed);
-	}
-
-	//クリック判定
-	if (BasicInput::mouse.left.up)
-	{
-		if (pointOnFlag(BasicInput::mouse.left.lastUp) && pointOnFlag(BasicInput::mouse.left.lastDown))
+		//ドラッグ判定と処理
+		if (pointOnFlag(BasicInput::mouse.left.lastDown))
 		{
-			clickedTimes++;
+			dragging = true;
 		}
-	}
+		if (!BasicInput::mouse.left.input)
+		{
+			dragging = false;
+		}
+		if (dragging && dragFlag)
+		{
+			setMidPosition(getMidPosition() + BasicInput::mouse.speed);
+		}
 
+		//クリック判定
+		if (BasicInput::mouse.left.up)
+		{
+			if (pointOnFlag(BasicInput::mouse.left.lastUp) && pointOnFlag(BasicInput::mouse.left.lastDown))
+			{
+				clickedTimes++;
+			}
+		}
 }
-void Button::setTLight(int light)
+Button* Button::setTLight(int light)
 {
 	TLight = light;
 	TGraphHandle = graphHandle;
 	GraphFilter(TGraphHandle, DX_GRAPH_FILTER_HSB, 0, 0, 0, TLight);
+	return this;
 }
-void Button::setDragFlag(bool flag)
+Button* Button::setDragFlag(bool flag)
 {
 	dragFlag = flag;
+	return this;
 }
 
-void Button::setTextPosition(Vector2 pos)
+Button* Button::setTextPosition(Vector2 pos)
 {
 	textPosition = pos;
+	return this;
 }
 
-void Button::setText(TCHAR* text,...)
+Button* Button::setText(TCHAR* text, ...)
 {
 	this->text = text;
+	return this;
 }
 
 
-void Button::setTextColor(int r, int g, int b)
+Button* Button::setTextColor(int r, int g, int b)
 {
 	this->textColor = GetColor(r, g, b);
+	return this;
 }
 
-void Button::setColor(int r, int g, int b)
+Button* Button::setColor(int r, int g, int b)
 {
 	colorFlag = true;
 	color = GetColor(r, g, b);
 	mouseOnColor = GetColor(r + TLight, g + TLight, b + TLight);
+	return this;
 }
-void Button::setColor(bool flag)
+Button* Button::setColor(bool flag)
 {
 	colorFlag = flag;
+	return this;
 }
 
-void Button::setGraph(Vector2 pix,TCHAR* graphName)
+Button* Button::setGraph(Vector2 pix, TCHAR* graphName)
 {
 	colorFlag = false;
 	bottom = top + pix;
 	this->graphHandle = LoadGraph(graphName);
 	this->TGraphHandle = LoadGraph(graphName);
 	GraphFilter(TGraphHandle, DX_GRAPH_FILTER_HSB, 0, 0, 0, TLight);
+	return this;
 }
 
 

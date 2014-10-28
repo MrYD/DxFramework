@@ -12,11 +12,11 @@ public:
 	void draw();
 	void upDate();
 	void afterDraw();
-	void setMidPosition(Vector2 pos);
-	void setTopPosition(Vector2 pos);
-	void setGraphPx(Vector2 graphPx);
-	void setGraph(TCHAR* graphName);
-	void setGraph(Vector2 pix,TCHAR* graphName);
+	Graphic* setMidPosition(Vector2 pos);
+	Graphic* setTopPosition(Vector2 pos);
+	Graphic* setGraphPx(Vector2 graphPx);
+	Graphic* setGraph(TCHAR* graphName);
+	Graphic* setGraph(Vector2 pix, TCHAR* graphName);
 	bool pointOnFlag(Vector2 point);
 	Vector2 top;
 	Vector2 bottom;
