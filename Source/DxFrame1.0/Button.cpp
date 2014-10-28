@@ -1,6 +1,6 @@
 #include"Button.h"
 
-Button::Button()
+Button::Button() :Graphic()
 {
 	init();
 }

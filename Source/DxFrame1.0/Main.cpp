@@ -23,8 +23,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 	//シーン初期化
 	Scene *scene[2];
-	scene[0] = new MenuScene();
-	scene[1] = new GameScene();
+	scene[0] = new MenuScene(0);
+	scene[1] = new GameScene(1);
+	for (Scene* itr : scene)
+	{
+		itr->BeforeInit();
+		itr->init();
+	}
+	GameModes::sceneMode = 0;
 	WaitTimer(1000);
 	//フェードアウト
 	for (int i = 255; i >= 0; i-=20) {

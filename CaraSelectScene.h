@@ -4,7 +4,7 @@ class CaraSelectScene :
 	public Scene
 {
 public:
-	CaraSelectScene();
+	CaraSelectScene(int number);
 	~CaraSelectScene();
 	void init();
 	void upDate();

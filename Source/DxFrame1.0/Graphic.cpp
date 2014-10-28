@@ -1,12 +1,12 @@
 #include "Graphic.h"
 
-Graphic::Graphic(Vector2 position, Vector2 graphPx, TCHAR* graphName)
+Graphic::Graphic(Vector2 position, Vector2 graphPx, TCHAR* graphName) :DrawableBase()
 {
 	this->top = position;
 	this->bottom = position + graphPx;
 	this->graphHandle = LoadGraph(graphName);
 }
-Graphic::Graphic()
+Graphic::Graphic() :DrawableBase()
 {
 	this->top = Vector2(0, 0);
 	this->bottom = Vector2(150,50);

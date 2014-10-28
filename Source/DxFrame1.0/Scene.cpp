@@ -1,36 +1,41 @@
 #include "Scene.h"
 
 
-Scene::Scene()
+Scene::Scene(int number)
 {
+	this->number = number;
+	BeforeInit();
 }
 
 Scene::~Scene()
 {
 }
-
+void Scene::BeforeInit()
+{
+	GameModes::sceneMode = number;
+}
 
 void Scene::draw()
 {
 	//DrawableList‚Ì•`‰æ
 	int min = 0, count = 0;
-	for (std::list<DrawableBase*>::iterator itr = DrawableList.begin(); itr != DrawableList.end(); itr++)
+	for (std::list<DrawableBase*>::iterator itr = DrawableBase::DrawableList.begin(); itr != DrawableBase::DrawableList.end(); itr++)
 	{
-		if (!(*itr)->isVisible)continue;
-		(*itr)->upDate();
 		if ((*itr)->layer < min)
 		{
 			min = (*itr)->layer;
 		}
+		if (!(*itr)->isVisible || (*itr)->scene != GameModes::sceneMode)continue;
+		(*itr)->upDate();
 	}
-	while (count<DrawableList.size())
+	while (count < DrawableBase::DrawableList.size())
 	{
-		for (std::list<DrawableBase*>::iterator itr =DrawableList.begin(); itr != DrawableList.end(); itr++)
+		for (std::list<DrawableBase*>::iterator itr = DrawableBase::DrawableList.begin(); itr != DrawableBase::DrawableList.end(); itr++)
 		{
 			if ((*itr)->layer == min)
 			{
 				count++;
-				if (!(*itr)->isVisible)continue;
+				if (!(*itr)->isVisible || (*itr)->scene != GameModes::sceneMode)continue;
 				(*itr)->draw();
 			}
 		}
@@ -38,9 +43,3 @@ void Scene::draw()
 	}
 }
 
-Button* Scene::createButton()
-{
-	Button* button = new Button();
-	DrawableList.push_back(button);
-	return button;
-}

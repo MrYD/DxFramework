@@ -1,7 +1,7 @@
 #include "CaraSelectScene.h"
 
 
-CaraSelectScene::CaraSelectScene() :Scene()
+CaraSelectScene::CaraSelectScene(int number) :Scene(number)
 {
 }
 

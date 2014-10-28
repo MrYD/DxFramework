@@ -8,12 +8,12 @@
 class Scene
 {
 public:
-	Scene();
+	Scene(int number);
 	virtual ~Scene();
-	virtual void init() = 0;
+	void BeforeInit();
+	virtual void init()=0;
 	virtual void upDate() = 0;
 	void draw();
-	std::list<DrawableBase*> DrawableList;
-	Button* createButton();
+	int number;
 };
 
