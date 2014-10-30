@@ -4,6 +4,7 @@
 #include "Button.h"
 #include "DrawableBase.h"
 #include <list>
+#include <map>
 
 class Scene
 {
@@ -15,6 +16,6 @@ public:
 	virtual void upDate() = 0;
 	void draw();
 	int number;
-	std::list<DrawableBase*> DrawableList;
+	std::map<int, std::list<DrawableBase*>> DrawableLayers;
 };
 

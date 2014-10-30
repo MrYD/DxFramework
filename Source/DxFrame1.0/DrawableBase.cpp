@@ -18,6 +18,7 @@ DrawableBase::~DrawableBase()
 void DrawableBase::setLayer(int layer)
 {
 	this->layer = layer;
+	GlobalVariable::newDrawableFlag = true;
 }
 
 std::list<DrawableBase*> DrawableBase::DrawableList;

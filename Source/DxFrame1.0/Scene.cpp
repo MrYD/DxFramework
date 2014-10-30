@@ -15,41 +15,38 @@ void Scene::setNumber(int num)
 
 void Scene::draw()
 {
-	//DrawableListの更新
+	// DrawableLayersの更新
 	if (GlobalVariable::newDrawableFlag)
 	{
-		DrawableList.clear();
+		for (std::map<int, std::list<DrawableBase*>>::iterator Listitr = DrawableLayers.begin(); Listitr != DrawableLayers.end(); Listitr++)
+		{
+			Listitr->second.clear();
+		}
 		for (std::list<DrawableBase*>::iterator itr = DrawableBase::DrawableList.begin(); itr != DrawableBase::DrawableList.end(); itr++)
 		{
 			if ((*itr)->scene == number)
 			{
-				DrawableList.push_back(*itr);
+				DrawableLayers[(*itr)->layer].push_back(*itr);
 			}
 		}
 	}
-	//DrawableListの描画
-	int min = 0, count = 0;
-	for (std::list<DrawableBase*>::iterator itr = DrawableList.begin(); itr != DrawableList.end(); itr++)
+	// DrawableLayersの描画
+	for (std::map<int, std::list<DrawableBase*>>::iterator Listitr = DrawableLayers.begin(); Listitr != DrawableLayers.end(); Listitr++)
 	{
-		if ((*itr)->layer < min)
+		for (std::list<DrawableBase*>::iterator itr = Listitr->second.begin(); itr != Listitr->second.end(); itr++)
 		{
-			min = (*itr)->layer;
+			if (!(*itr)->isVisible)continue;
+			(*itr)->upDate();
 		}
-		if (!(*itr)->isVisible)continue;
-		(*itr)->upDate();
 	}
-	while (count < DrawableList.size())
+	for (std::map<int, std::list<DrawableBase*>>::iterator Listitr = DrawableLayers.begin(); Listitr != DrawableLayers.end(); Listitr++)
 	{
-		for (std::list<DrawableBase*>::iterator itr = DrawableList.begin(); itr != DrawableList.end(); itr++)
+		for (std::list<DrawableBase*>::iterator itr = Listitr->second.begin(); itr != Listitr->second.end(); itr++)
 		{
-			if ((*itr)->layer == min)
-			{
-				count++;
-				if (!(*itr)->isVisible)continue;
-				(*itr)->draw();
-			}
+			if (!(*itr)->isVisible)continue;
+			(*itr)->draw();
 		}
-		min++;
 	}
+	
 }
 

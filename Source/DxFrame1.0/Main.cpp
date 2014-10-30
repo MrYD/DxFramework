@@ -19,7 +19,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	std::map<int,Scene*> SceneMap;
 	GlobalVariable::sceneMode = 0;
 	int scene = 0;
-	int flame = 0;
 	// タイトルシーンの初期化
 	SceneMap[GlobalVariable::sceneMode] = SceneFactory::createScene(GlobalVariable::sceneMode);
 	SceneMap[GlobalVariable::sceneMode]->init();
@@ -65,7 +64,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		SceneMap[GlobalVariable::sceneMode]->upDate();
 		// 裏画面の内容を表画面に反映します
 		ScreenFlip();
-		flame++;
 	}
 
 	// 描画メモリの解放
