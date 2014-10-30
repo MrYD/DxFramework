@@ -13,6 +13,6 @@ void TitleScene::upDate()
 {
 	time++;
 	if(time==50){
-		GameModes::sceneMode = 1;
+		GlobalVariable::sceneMode = 1;
 	}
 }

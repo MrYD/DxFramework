@@ -30,6 +30,6 @@ void MenuScene::upDate()
 {
 	if (Hana->getClickedTimes())
 	{
-		GameModes::sceneMode = 2;
+		GlobalVariable::sceneMode = 2;
 	}
 }

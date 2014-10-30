@@ -36,9 +36,6 @@
     <ClCompile Include="Source\DxFrame1.0\DrawableBase.cpp">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClCompile>
-    <ClCompile Include="Source\DxFrame1.0\GameModes.cpp">
-      <Filter>ソース ファイル\DxFrame1.0</Filter>
-    </ClCompile>
     <ClCompile Include="Source\DxFrame1.0\Graphic.cpp">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClCompile>
@@ -60,6 +57,9 @@
     <ClCompile Include="Source\DxFrame1.0\TitleScene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Source\DxFrame1.0\GlobalVariable.cpp">
+      <Filter>ソース ファイル\DxFrame1.0</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\DxFrame1.0\GameScene.h">
@@ -77,9 +77,6 @@
     <ClInclude Include="Source\DxFrame1.0\DrawableBase.h">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DxFrame1.0\GameModes.h">
-      <Filter>ソース ファイル\DxFrame1.0</Filter>
-    </ClInclude>
     <ClInclude Include="Source\DxFrame1.0\Graphic.h">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClInclude>
@@ -94,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="Source\DxFrame1.0\TitleScene.h">
       <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DxFrame1.0\GlobalVariable.h">
+      <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

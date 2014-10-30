@@ -1,6 +1,7 @@
 #pragma once
 #include<list>
-#include"GameModes.h""
+#include "GlobalVariable.h"
+
 class DrawableBase
 {
 public:

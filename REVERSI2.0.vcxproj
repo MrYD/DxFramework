@@ -42,9 +42,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,7 +91,7 @@
     <ClCompile Include="Source\DxFrame1.0\BasicInput.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Button.cpp" />
     <ClCompile Include="Source\DxFrame1.0\DrawableBase.cpp" />
-    <ClCompile Include="Source\DxFrame1.0\GameModes.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\GlobalVariable.cpp" />
     <ClCompile Include="Source\DxFrame1.0\GameScene.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Graphic.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Main.cpp" />
@@ -104,7 +106,7 @@
     <ClInclude Include="Source\DxFrame1.0\BasicInput.h" />
     <ClInclude Include="Source\DxFrame1.0\Button.h" />
     <ClInclude Include="Source\DxFrame1.0\DrawableBase.h" />
-    <ClInclude Include="Source\DxFrame1.0\GameModes.h" />
+    <ClInclude Include="Source\DxFrame1.0\GlobalVariable.h" />
     <ClInclude Include="Source\DxFrame1.0\GameScene.h" />
     <ClInclude Include="Source\DxFrame1.0\Graphic.h" />
     <ClInclude Include="Source\DxFrame1.0\MenuScene.h" />
