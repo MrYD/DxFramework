@@ -14,6 +14,7 @@
     <ProjectGuid>{F981778A-3A27-4BE9-B7C7-629F76EA747B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>REVERSI20</RootNamespace>
+    <ProjectName>DxFramework1.0</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -85,7 +86,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CaraSelectScene.cpp" />
     <ClCompile Include="Source\DxFrame1.0\BasicInput.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Button.cpp" />
     <ClCompile Include="Source\DxFrame1.0\DrawableBase.cpp" />
@@ -95,11 +95,12 @@
     <ClCompile Include="Source\DxFrame1.0\Main.cpp" />
     <ClCompile Include="Source\DxFrame1.0\MenuScene.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Scene.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\SceneFactory.cpp" />
+    <ClCompile Include="Source\DxFrame1.0\TitleScene.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Vector2.cpp" />
     <ClCompile Include="Source\DxFrame1.0\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CaraSelectScene.h" />
     <ClInclude Include="Source\DxFrame1.0\BasicInput.h" />
     <ClInclude Include="Source\DxFrame1.0\Button.h" />
     <ClInclude Include="Source\DxFrame1.0\DrawableBase.h" />
@@ -108,6 +109,8 @@
     <ClInclude Include="Source\DxFrame1.0\Graphic.h" />
     <ClInclude Include="Source\DxFrame1.0\MenuScene.h" />
     <ClInclude Include="Source\DxFrame1.0\Scene.h" />
+    <ClInclude Include="Source\DxFrame1.0\SceneFactory.h" />
+    <ClInclude Include="Source\DxFrame1.0\TitleScene.h" />
     <ClInclude Include="Source\DxFrame1.0\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

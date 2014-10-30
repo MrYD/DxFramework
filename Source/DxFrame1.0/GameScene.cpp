@@ -1,7 +1,7 @@
 #include "GameScene.h"
 
 
-GameScene::GameScene(int number) : Scene(number)
+GameScene::GameScene()
 {
 }
 

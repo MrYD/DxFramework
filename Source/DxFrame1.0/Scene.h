@@ -8,9 +8,9 @@
 class Scene
 {
 public:
-	Scene(int number);
+	Scene();
+	void setNumber(int num);
 	virtual ~Scene();
-	void BeforeInit();
 	virtual void init()=0;
 	virtual void upDate() = 0;
 	void draw();

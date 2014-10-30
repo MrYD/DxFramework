@@ -6,7 +6,7 @@ class GameScene :
 	public Scene
 {
 public:
-	GameScene(int number);
+	GameScene();
 	~GameScene();
 	void init();
 	void upDate();

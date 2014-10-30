@@ -1,18 +1,13 @@
 #include "MenuScene.h"
 
 
-MenuScene::MenuScene(int number) :Scene(number)
+MenuScene::MenuScene() 
 {
-	init();
 }
 
 
 MenuScene::~MenuScene()
 {
-	delete Back;
-	delete Hana;
-	delete devil;
-	delete button1;
 }
 void MenuScene::init()
 {
@@ -35,6 +30,6 @@ void MenuScene::upDate()
 {
 	if (Hana->getClickedTimes())
 	{
-		GameModes::sceneMode = 1;
+		GameModes::sceneMode = 2;
 	}
 }

@@ -51,7 +51,13 @@
     <ClCompile Include="Source\DxFrame1.0\Vector3.cpp">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClCompile>
-    <ClCompile Include="CaraSelectScene.cpp">
+    <ClCompile Include="Source\DxFrame1.0\SceneFactory.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DxFrame1.0\SceneFactory.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DxFrame1.0\TitleScene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,8 +89,11 @@
     <ClInclude Include="Source\DxFrame1.0\Vector3.h">
       <Filter>ソース ファイル\DxFrame1.0</Filter>
     </ClInclude>
-    <ClInclude Include="CaraSelectScene.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="Source\DxFrame1.0\SceneFactory.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DxFrame1.0\TitleScene.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

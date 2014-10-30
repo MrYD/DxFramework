@@ -1,18 +1,16 @@
 #include "Scene.h"
 
 
-Scene::Scene(int number)
+Scene::Scene()
 {
-	this->number = number;
-	BeforeInit();
 }
 
 Scene::~Scene()
 {
 }
-void Scene::BeforeInit()
+void Scene::setNumber(int num)
 {
-	GameModes::sceneMode = number;
+	this->number = num;
 }
 
 void Scene::draw()
@@ -25,7 +23,7 @@ void Scene::draw()
 		{
 			min = (*itr)->layer;
 		}
-		if (!(*itr)->isVisible || (*itr)->scene != GameModes::sceneMode)continue;
+		if (!(*itr)->isVisible || (*itr)->scene != number)continue;
 		(*itr)->upDate();
 	}
 	while (count < DrawableBase::DrawableList.size())
@@ -35,7 +33,7 @@ void Scene::draw()
 			if ((*itr)->layer == min)
 			{
 				count++;
-				if (!(*itr)->isVisible || (*itr)->scene != GameModes::sceneMode)continue;
+				if (!(*itr)->isVisible || (*itr)->scene != number)continue;
 				(*itr)->draw();
 			}
 		}

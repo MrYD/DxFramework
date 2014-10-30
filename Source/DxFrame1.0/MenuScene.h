@@ -6,7 +6,7 @@ class MenuScene :
 	public Scene
 {
 public:
-	MenuScene(int number);
+	MenuScene();
 	~MenuScene();
 	void init();
 	void upDate();
